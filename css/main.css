@@ -4,10 +4,25 @@
     padding: 0;
 }
 
+body {
+    font-family: "Droid Sans", sans-serif;
+    font-size: 16px;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .firstSection {
     width: 100vw;
     height: 100vh;
     background-color: darkslategray;
+}
+.firstSection h1 {
+    font-size: 3em;
+    color: whitesmoke;
 }
 .secondSection {
     width: 100vw;
