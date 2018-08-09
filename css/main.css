@@ -18,7 +18,8 @@ body {
 .firstSection {
     width: 100vw;
     height: 100vh;
-    background-color: darkslategray;
+    background-color: black;
+    background-size: cover;
 }
 .firstSection h1 {
     font-size: 3em;
@@ -27,5 +28,6 @@ body {
 .secondSection {
     width: 100vw;
     height: 100vh;
-    background-color: beige;
+    background-color: black;
+    background-size: cover;
 }
