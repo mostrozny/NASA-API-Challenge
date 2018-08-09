@@ -1,10 +1,9 @@
 //api key: uPEwNrk9updnhBTYgoXZiLinsuV9XMoOmyJYSnZi
 $(() => {
 
-    const nasaUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=100&page=2';
+    const nasaUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=100&page=3';
     const backgroundNasa = 'https://api.nasa.gov/planetary/apod';
     const apiKey = 'api_key=uPEwNrk9updnhBTYgoXZiLinsuV9XMoOmyJYSnZi';
-    let image = '';
 
     const loadContent = () => {
         $.ajax({
@@ -27,8 +26,6 @@ $(() => {
             const link = response.hdurl;
             firstSection.css('backgroundImage', `url(${link})`);
         });
-        console.log(firstSection);
-        //   firstSection.css('backgroundImage', "url(' + image.hdUrl + ')");
     }
 
     const addGalleryBackgrouds = () => {
@@ -39,12 +36,18 @@ $(() => {
             dataType: "json",
         }).done(function (response) {
             console.log(response);
-            const link = response.photos[1].img_src;
-            console.log(link);
-            secondsection.css('backgroundImage', `url(${link})`);
+            let link = "";
+            for (let i=0; i<6; i++){
+                link = response.photos[i].img_src;
+                console.log(link);
+                const div = $('<div></div>');
+                secondSection.append(div);
+                div.css('backgroundImage', 'cover');
+                div.css('width', '100vw');
+                div.css('height', '100vh');
+                div.css('backgroundImage', `url(${link})`);
+            }
         });
-       // console.log(secondSection);
-        //   firstSection.css('backgroundImage', "url(' + image.hdUrl + ')");
     }
 
     loadContent();
