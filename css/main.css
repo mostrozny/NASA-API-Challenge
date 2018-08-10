@@ -15,6 +15,15 @@ body {
     align-items: center;
 }
 
+.secondSection div {
+    background-color: black;
+    background-image: contain;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
 .firstSection {
     width: 100vw;
     height: 100vh;
