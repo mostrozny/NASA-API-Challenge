@@ -31,3 +31,31 @@ body {
     background-color: black;
     background-size: cover;
 }
+
+
+/*preload*/
+body {
+      overflow: hidden;
+}
+
+#preloader {
+     position: fixed;
+    z-index: 10;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: black;
+ }
+
+#status {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(https://www.ps.org.pl/assets/porownajszkode/img/loader.gif?44271f65031b0ccb25f23bfff0d23ef2);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -50px 0 0 -50px;
+}

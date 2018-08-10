@@ -1,7 +1,19 @@
 //api key: uPEwNrk9updnhBTYgoXZiLinsuV9XMoOmyJYSnZi
+
+//preload
+$(window).on('load', () => {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+});
+
 $(() => {
 
-    const nasaUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=100&page=3';
+
+
+
+
+    const nasaUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=300&page=1';
     const backgroundNasa = 'https://api.nasa.gov/planetary/apod';
     const apiKey = 'api_key=uPEwNrk9updnhBTYgoXZiLinsuV9XMoOmyJYSnZi';
 
@@ -42,10 +54,13 @@ $(() => {
                 console.log(link);
                 const div = $('<div></div>');
                 secondSection.append(div);
-                div.css('backgroundImage', 'cover');
+                div.css('backgroundColor', 'black');
+                div.css('backgroundImage', `url(${link})`);
+                div.css('backgroundImage', 'contain');
+                div.css('backgroundSize', '100%');
+                div.css('backgroundRepeat', 'no-repeat');
                 div.css('width', '100vw');
                 div.css('height', '100vh');
-                div.css('backgroundImage', `url(${link})`);
             }
         });
     }
