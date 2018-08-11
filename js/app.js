@@ -11,7 +11,6 @@ $(() => {
     const apiKey = 'api_key=uPEwNrk9updnhBTYgoXZiLinsuV9XMoOmyJYSnZi';
 
     const addFirstBackground = () => {
-        let getObject;
         $.ajax({
             method: "GET",
             url: backgroundNasa + '?' + apiKey,
@@ -47,5 +46,6 @@ $(() => {
 
     addFirstBackground();
     addGalleryBackgrounds();
+
 
 });
